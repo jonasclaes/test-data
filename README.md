@@ -11,6 +11,36 @@ This repository provides a variety of test files including documents, images, me
 - **CI/CD pipelines** - Reliable test data for continuous integration
 - **Development and debugging** - Sample files for local testing
 
+## 🚀 Use
+
+To use files from this repository in your tests or applications, use the GitHub raw content endpoint:
+
+```
+https://raw.githubusercontent.com/jonasclaes/test-data/main/path/to/your/file.ext
+```
+
+For version-specific access, use a commit hash instead of the branch name:
+
+```
+https://raw.githubusercontent.com/jonasclaes/test-data/{commit-hash}/path/to/your/file.ext
+```
+
+**Example:**
+```bash
+# Download a test file directly (latest version)
+curl -O https://raw.githubusercontent.com/jonasclaes/test-data/main/pdfs/basic.pdf
+
+# Download from a specific commit
+curl -O https://raw.githubusercontent.com/jonasclaes/test-data/abc123def456/pdfs/basic.pdf
+```
+
+**Benefits of using permalinks:**
+- **Reliable URLs** - Files are accessible from any environment
+- **Version control** - Use specific commits for consistent test data
+- **Immutable references** - Commit hashes ensure the exact same file content
+- **No local storage** - Fetch files on-demand in CI/CD pipelines
+- **Easy integration** - Works with any HTTP client or testing framework
+
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to add new test files that would be useful for the community:
